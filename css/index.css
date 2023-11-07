@@ -4,6 +4,22 @@
 
 html, body {
     margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+/* TYPOGRAPHY */
+.text-regular {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.text-bold {
+    font-weight: 600;
+    font-size: 13px;
+}
+
+p {
+    margin: 0;
 }
 
 /* LAYOUT */
@@ -19,6 +35,11 @@ nav {
     padding: 0 10px;
 }
 
+.post-header {
+    display: flex;
+    margin: 10px;
+}
+
 /* IMAGES */
 .logo {
     width: 110px;
@@ -30,4 +51,14 @@ nav {
     width: 40px;
     height: auto;
     padding-top: 10px;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 34px;
+    margin-right: 7px;
+}
+
+.post {
+    max-width: 100%;
 }
