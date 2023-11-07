@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+}
+
+/* LAYOUT */
+.container {
+    margin: 0 auto;
+    max-width: 375px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #C6C6C6;
+    padding: 0 10px;
+}
+
+/* IMAGES */
+.logo {
+    width: 110px;
+    height: auto;
+    margin-top: 5px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: auto;
+    padding-top: 10px;
+}
