@@ -6,7 +6,7 @@ export const posts = [
     avatar: 'images/avatar-vangogh.jpg',
     post: 'images/post-vangogh.jpg',
     comment: 'just took a few mushrooms lol',
-    likes: 21,
+    likes: 732,
   },
   {
     name: 'Gustave Courbet',
@@ -25,6 +25,6 @@ export const posts = [
     post: 'images/post-ducreux.jpg',
     comment:
       'gm friends! which coin are YOU stacking up today?? post below and WAGMI!',
-    likes: 152,
+    likes: 998,
   },
 ];

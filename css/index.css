@@ -42,6 +42,11 @@ nav {
     margin: 10px;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 /* IMAGES */
 .logo {
     width: 110px;
@@ -88,7 +93,7 @@ nav {
     opacity: 0.6;
 }
 
-
+/* SPACING */
 .post-info {
     margin-left: 15px;
 }
