@@ -1,5 +1,5 @@
 # Oldagram
-🎨 Instagram clone with a twist built HTML, CSS and Vanilla JavaScript.
+🎨 Instagram clone with a twist built with HTML, CSS and Vanilla JavaScript.
 
 View the finished project on [Netlify](https://oldagram-lucieyarish.netlify.app/)!
 
