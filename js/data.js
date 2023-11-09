@@ -1,5 +1,6 @@
 export const posts = [
   {
+    id: 1,
     name: 'Vincent van Gogh',
     username: 'vincey1853',
     location: 'Zundert, Netherlands',
@@ -9,6 +10,7 @@ export const posts = [
     likes: 732,
   },
   {
+    id: 2,
     name: 'Gustave Courbet',
     username: 'gus1819',
     location: 'Ornans, France',
@@ -18,6 +20,7 @@ export const posts = [
     likes: 4,
   },
   {
+    id: 3,
     name: 'Joseph Ducreux',
     username: 'jd1735',
     location: 'Paris, France',
