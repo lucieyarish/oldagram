@@ -10,3 +10,8 @@ View the finished project on [Netlify](https://oldagram-lucieyarish.netlify.app/
 I built this solo project while learning essential CSS concepts through Scrimba's [Frontend Career Path courses](https://scrimba.com/learn/frontend). Figma design was provided by Scrimba and the project was built from scratch by me.
 
 Total dev time: 4 hours
+
+## Tools
+
+The app was built with the help of these tools:
+- [fonticon](https://gauger.io/fonticon/) - awesome icon generator
