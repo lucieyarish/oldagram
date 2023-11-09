@@ -1,9 +1,9 @@
 # Oldagram
 🎨 Instagram clone with a twist built HTML, CSS and Vanilla JavaScript.
 
-<img width="500" alt="oldagram-showcase" src="https://github.com/lucieyarish/oldagram/assets/79669599/2965313c-d57a-4351-be3d-01768957cbff">
-
 View the finished project on [Netlify](https://oldagram-lucieyarish.netlify.app/)!
+
+<img width="500" alt="oldagram-showcase" src="https://github.com/lucieyarish/oldagram/assets/79669599/2965313c-d57a-4351-be3d-01768957cbff">
 
 ## About
 
