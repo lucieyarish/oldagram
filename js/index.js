@@ -2,51 +2,46 @@ import { posts } from './data.js';
 
 const postList = document.getElementById('post-list');
 
-let id;
-let avatar;
-let name;
-let location;
-let post;
-let likes;
-let username;
-let comment;
+function renderTemplate() {
+  for (let i = 0; i < posts.length; i++) {
+    const id = posts[i].id;
+    const avatar = posts[i].avatar;
+    const name = posts[i].name;
+    const location = posts[i].location;
+    const post = posts[i].post;
+    const likes = posts[i].likes;
+    const username = posts[i].username;
+    const comment = posts[i].comment;
 
-for (let i = 0; i < posts.length; i++) {
-  id = posts[i].id;
-  avatar = posts[i].avatar;
-  name = posts[i].name;
-  location = posts[i].location;
-  post = posts[i].post;
-  likes = posts[i].likes;
-  username = posts[i].username;
-  comment = posts[i].comment;
+    const altValue = assignImgAltValues(id);
 
-  const altValue = assignImgAltValues(id);
+    const html = `
+    <section class="post-container indent-bottom-15 key-group" id="${id}">
+      <div class="post-header">
+          <img class="profile-photo" src="${avatar}" alt="${altValue.profilePhotoAlt}">
+          <div class="post-author-info">
+              <p class="text-bold">${name}</p>
+              <p class="text-regular">${location}</p>
+          </div>
+      </div>
+      <img class="post" src="${post}" alt="${altValue.postAlt}">
+      <div class="post-action-icons">
+          <button class="action-icon-btn" data-id="${id}"><img class="action-icon" src="images/icon-heart.png" alt="Heart outline icon"></button>
+          <button class="action-icon-btn"><img class="action-icon" src="images/icon-comment.png" alt="Speech bubble outline icon"></button>
+          <button class="action-icon-btn"><img class="action-icon" src="images/icon-dm.png" alt="Direct message outline icon"></button>
+      </div>
+      <div class="post-info">
+          <p class="text-bold indent-bottom-8">${likes}</p>
+          <p class="text-regular"><span class="text-bold indent-right">${username}</span>${comment}</p>
+      </div>
+    </section>
+  `;
 
-  const html = `
-  <section class="post-container indent-bottom-15 key-group" id="${id}">
-    <div class="post-header">
-        <img class="profile-photo" src="${avatar}" alt="${altValue.profilePhotoAlt}">
-        <div class="post-author-info">
-            <p class="text-bold">${name}</p>
-            <p class="text-regular">${location}</p>
-        </div>
-    </div>
-    <img class="post" src="${post}" alt="${altValue.postAlt}">
-    <div class="post-action-icons">
-        <button class="action-icon-btn" data-id="${id}"><img class="action-icon" src="images/icon-heart.png" alt="Heart outline icon"></button>
-        <button class="action-icon-btn"><img class="action-icon" src="images/icon-comment.png" alt="Speech bubble outline icon"></button>
-        <button class="action-icon-btn"><img class="action-icon" src="images/icon-dm.png" alt="Direct message outline icon"></button>
-    </div>
-    <div class="post-info">
-        <p class="text-bold indent-bottom-8">${likes}</p>
-        <p class="text-regular"><span class="text-bold indent-right">${username}</span>${comment}</p>
-    </div>
-  </section>
-`;
-
-  postList.innerHTML += html;
+    postList.innerHTML += html;
+  }
 }
+
+renderTemplate();
 
 function assignImgAltValues(id) {
   let obj = {
