@@ -4,14 +4,8 @@ const postList = document.getElementById('post-list');
 
 function renderTemplate() {
   for (let i = 0; i < posts.length; i++) {
-    const id = posts[i].id;
-    const avatar = posts[i].avatar;
-    const name = posts[i].name;
-    const location = posts[i].location;
-    const post = posts[i].post;
-    const likes = posts[i].likes;
-    const username = posts[i].username;
-    const comment = posts[i].comment;
+    const { id, avatar, name, location, post, likes, username, comment } =
+      posts[i];
 
     const altValue = assignImgAltValues(id);
 
@@ -31,7 +25,7 @@ function renderTemplate() {
           <button class="action-icon-btn"><img class="action-icon" src="images/icon-dm.png" alt="Direct message outline icon"></button>
       </div>
       <div class="post-info">
-          <p class="text-bold indent-bottom-8">${likes}</p>
+          <p class="post-info-likes text-bold indent-bottom-8">${likes}</p>
           <p class="text-regular"><span class="text-bold indent-right">${username}</span>${comment}</p>
       </div>
     </section>
@@ -73,9 +67,17 @@ function assignImgAltValues(id) {
 }
 
 document.addEventListener('click', function (event) {
-  if (event.target.closest('[data-id]')) {
-    //I was able to retrieve the ID of the button clicked,
-    //but couldn't figure out how to increase the amount of likes
-    let id = event.target.closest('[data-id]').dataset.id;
+  const button = event.target.closest('[data-id]');
+
+  if (button) {
+    const id = event.target.closest('[data-id]').dataset.id;
+
+    const post = posts.find((post) => post.id === id);
+    post.likes++;
+
+    let likesTextElement = button
+      .closest('.post-container')
+      .querySelector('.post-info-likes');
+    likesTextElement.textContent = `${post.likes} likes`;
   }
 });
