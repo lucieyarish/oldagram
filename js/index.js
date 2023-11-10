@@ -25,7 +25,7 @@ function renderTemplate() {
           <button class="action-icon-btn"><img class="action-icon" src="images/icon-dm.png" alt="Direct message outline icon"></button>
       </div>
       <div class="post-info">
-          <p class="post-info-likes text-bold indent-bottom-8">${likes}</p>
+          <p class="post-info-likes text-bold indent-bottom-8">${likes} likes</p>
           <p class="text-regular"><span class="text-bold indent-right">${username}</span>${comment}</p>
       </div>
     </section>
@@ -68,7 +68,6 @@ function assignImgAltValues(id) {
 
 document.addEventListener('click', function (event) {
   const button = event.target.closest('[data-id]');
-
   if (button) {
     const id = event.target.closest('[data-id]').dataset.id;
 
